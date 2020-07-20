@@ -4179,6 +4179,7 @@ MonoBehaviour:
   player: {fileID: 461484012}
   maxVidas: 3
   audioGameOver: {fileID: 8300000, guid: c4feffcaf8630b047bf0450efddd3868, type: 3}
+  audioWin: {fileID: 8300000, guid: 8ec45ee91aac0cd4aa3575eaa43afa7e, type: 3}
 --- !u!4 &2108383286
 Transform:
   m_ObjectHideFlags: 0
