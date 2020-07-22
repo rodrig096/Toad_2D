@@ -1995,6 +1995,8 @@ MonoBehaviour:
   maxVidas: 3
   audioGameOver: {fileID: 8300000, guid: c4feffcaf8630b047bf0450efddd3868, type: 3}
   audioWin: {fileID: 8300000, guid: 1e4d6d82bc421a9459e39d55948409ed, type: 3}
+  Contador: 3
+  EscenaSiguiente: 4
 --- !u!82 &1121499776
 AudioSource:
   m_ObjectHideFlags: 0

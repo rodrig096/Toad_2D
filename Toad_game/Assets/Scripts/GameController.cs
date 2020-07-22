@@ -26,12 +26,15 @@ public class GameController : MonoBehaviour
     private float limIzq;
     private float limDer;
     private GameObject gameWin;
-    public int Contador = 4;
+    public int Contador = 3;
+    [SerializeField] public int EscenaSiguiente;
 
     void Awake()
     {
+        /*DontDestroyOnLoad(nVidas);*/
+
         if (instance != null && instance != this)
-            Destroy( this.gameObject );
+           Destroy( this.gameObject );
         else
             instance = this;
 
@@ -50,6 +53,7 @@ public class GameController : MonoBehaviour
         puntos.text = nPuntos.ToString();
         gameOver.SetActive(false);
         gameWin.SetActive(false);
+        
     }
 
     public GameObject GetPlayer()
@@ -102,13 +106,52 @@ public class GameController : MonoBehaviour
             print(e);
         }
         
-        if(nPuntos == 7) 
+        if (nPuntos == 7)
+
         {
             audioSource.clip = audioWin;
             audioSource.Play();
-            
 
-            SceneManager.LoadScene(Contador);
+
+            SceneManager.LoadScene(EscenaSiguiente);
+
+
+            /* Contador += 1;
+
+             if (Contador == 4 || Contador == 5)
+             {
+                 audioSource.clip = audioWin;
+                 audioSource.Play();
+
+
+                 SceneManager.LoadScene(Contador);
+
+             }*/
+
+        }
+        
+        /*switch (Contador) //donde opción es la variable a comparar
+        {
+            case 4:
+
+                break;
+
+            case 5:
+                audioSource.clip = audioWin;
+                audioSource.Play();
+
+
+                SceneManager.LoadScene(Contador);
+                break;
+
+        }*/
+
+
+
+
+        /*if (nPuntos == 7) 
+        {
+           
             while (Contador < 5) 
             {
                 Contador += 1;
